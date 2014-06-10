@@ -12,7 +12,7 @@ public class RomanNumber {
 		if(arabicNumber == 5) {
 			return "V";
 		}
-		return "I" + convert(1);
+		return "I" + convert(arabicNumber - 1);
 	}
 
 }
