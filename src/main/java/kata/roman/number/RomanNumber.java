@@ -6,6 +6,9 @@ public class RomanNumber {
 		if(arabicNumber == 1) {
 			return "I";
 		}
+		if(arabicNumber == 5) {
+			return "V";
+		}
 		return "";
 	}
 
