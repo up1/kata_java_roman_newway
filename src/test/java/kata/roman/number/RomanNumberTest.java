@@ -50,5 +50,12 @@ public class RomanNumberTest {
 		assertEquals("D", romanNumber.convert(500));
 		assertEquals("M", romanNumber.convert(1000));
 	}
+	
+	@Test
+	public void anotherCase2() {
+		assertEquals("MCMLIV", romanNumber.convert(1954));
+		assertEquals("MCMXC", romanNumber.convert(1990));
+		assertEquals("MMXIV", romanNumber.convert(2014));
+	}
 
 }
