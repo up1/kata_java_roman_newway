@@ -9,16 +9,21 @@ public class RomanNumber {
 			return "";
 		}
 
+		MyNumber number = getConvertFactor(arabicNumber);
+		return number.roman + convert(arabicNumber - number.arabic);
+	}
+
+	private MyNumber getConvertFactor(int arabicNumber) {
 		ArrayList<MyNumber> myNumber = new ArrayList<MyNumber>();
 		myNumber.add(new MyNumber(5, "V"));
 		myNumber.add(new MyNumber(1, "I"));
 
 		for (MyNumber number : myNumber) {
 			if (number.arabic <= arabicNumber) {
-				return number.roman + convert(arabicNumber - number.arabic);
+				return number;
 			}
 		}
-		return "";
+		return null;
 	}
 
 }
