@@ -24,6 +24,7 @@ public class RomanNumber {
 		myNumber.add(new MyNumber(50, "L"));
 		myNumber.add(new MyNumber(40, "XL"));
 		myNumber.add(new MyNumber(10, "X"));
+		myNumber.add(new MyNumber(9, "IX"));
 		myNumber.add(new MyNumber(5, "V"));
 		myNumber.add(new MyNumber(4, "IV"));
 		myNumber.add(new MyNumber(1, "I"));
