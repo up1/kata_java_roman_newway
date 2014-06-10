@@ -29,8 +29,15 @@ public class RomanNumberTest {
 	}
 	
 	@Test
+	public void fourShouldReturnIV() {
+		assertEquals("IV", romanNumber.convert(4));
+	}
+	
+	@Test
 	public void fiveShouldReturnV() {
 		assertEquals("V", romanNumber.convert(5));
 	}
+	
+	
 
 }
