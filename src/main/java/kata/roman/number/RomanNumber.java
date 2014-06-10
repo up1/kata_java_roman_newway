@@ -1,7 +1,6 @@
 package kata.roman.number;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class RomanNumber {
 
@@ -10,15 +9,16 @@ public class RomanNumber {
 			return "";
 		}
 
-		if (arabicNumber == 5) {
-			return "V";
-		}
-
 		ArrayList<MyNumber> myNumber = new ArrayList<MyNumber>();
+		myNumber.add(new MyNumber(5, "V"));
 		myNumber.add(new MyNumber(1, "I"));
 
-		return myNumber.get(0).roman
-				+ convert(arabicNumber - myNumber.get(0).arabic);
+		for (MyNumber number : myNumber) {
+			if (number.arabic <= arabicNumber) {
+				return number.roman + convert(arabicNumber - number.arabic);
+			}
+		}
+		return "";
 	}
 
 }
