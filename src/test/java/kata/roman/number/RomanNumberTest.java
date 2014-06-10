@@ -38,6 +38,11 @@ public class RomanNumberTest {
 		assertEquals("V", romanNumber.convert(5));
 	}
 	
+	@Test
+	public void tenShouldReturnX() {
+		assertEquals("X", romanNumber.convert(10));
+	}
+	
 	
 
 }
