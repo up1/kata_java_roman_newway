@@ -43,6 +43,12 @@ public class RomanNumberTest {
 		assertEquals("X", romanNumber.convert(10));
 	}
 	
-	
+	@Test
+	public void anotherCase() {
+		assertEquals("L", romanNumber.convert(50));
+		assertEquals("C", romanNumber.convert(100));
+		assertEquals("D", romanNumber.convert(500));
+		assertEquals("M", romanNumber.convert(1000));
+	}
 
 }
