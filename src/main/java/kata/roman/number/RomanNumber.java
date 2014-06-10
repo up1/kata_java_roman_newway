@@ -4,6 +4,24 @@ import java.util.ArrayList;
 
 public class RomanNumber {
 
+	ArrayList<MyNumber> myNumber = new ArrayList<MyNumber>() {
+		{
+			add(new MyNumber(1000, "M"));
+			add(new MyNumber(900, "CM"));
+			add(new MyNumber(500, "D"));
+			add(new MyNumber(400, "CD"));
+			add(new MyNumber(100, "C"));
+			add(new MyNumber(90, "XC"));
+			add(new MyNumber(50, "L"));
+			add(new MyNumber(40, "XL"));
+			add(new MyNumber(10, "X"));
+			add(new MyNumber(9, "IX"));
+			add(new MyNumber(5, "V"));
+			add(new MyNumber(4, "IV"));
+			add(new MyNumber(1, "I"));
+		}
+	};
+
 	public String convert(int arabicNumber) {
 		if (arabicNumber == 0) {
 			return "";
@@ -14,21 +32,6 @@ public class RomanNumber {
 	}
 
 	private MyNumber getConvertFactor(int arabicNumber) {
-		ArrayList<MyNumber> myNumber = new ArrayList<MyNumber>();
-		myNumber.add(new MyNumber(1000, "M"));
-		myNumber.add(new MyNumber(900, "CM"));
-		myNumber.add(new MyNumber(500, "D"));
-		myNumber.add(new MyNumber(400, "CD"));
-		myNumber.add(new MyNumber(100, "C"));
-		myNumber.add(new MyNumber(90, "XC"));
-		myNumber.add(new MyNumber(50, "L"));
-		myNumber.add(new MyNumber(40, "XL"));
-		myNumber.add(new MyNumber(10, "X"));
-		myNumber.add(new MyNumber(9, "IX"));
-		myNumber.add(new MyNumber(5, "V"));
-		myNumber.add(new MyNumber(4, "IV"));
-		myNumber.add(new MyNumber(1, "I"));
-
 		for (MyNumber number : myNumber) {
 			if (number.arabic <= arabicNumber) {
 				return number;
