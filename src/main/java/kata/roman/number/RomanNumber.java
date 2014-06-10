@@ -15,6 +15,7 @@ public class RomanNumber {
 
 	private MyNumber getConvertFactor(int arabicNumber) {
 		ArrayList<MyNumber> myNumber = new ArrayList<MyNumber>();
+		myNumber.add(new MyNumber(10, "X"));
 		myNumber.add(new MyNumber(5, "V"));
 		myNumber.add(new MyNumber(4, "IV"));
 		myNumber.add(new MyNumber(1, "I"));
