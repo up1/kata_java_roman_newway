@@ -56,6 +56,7 @@ public class RomanNumberTest {
 		assertEquals("MCMLIV", romanNumber.convert(1954));
 		assertEquals("MCMXC", romanNumber.convert(1990));
 		assertEquals("MMXIV", romanNumber.convert(2014));
+		assertEquals("IX", romanNumber.convert(9));
 	}
 
 }
